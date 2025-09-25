@@ -266,7 +266,7 @@ function createOutputFromOptions(program, res) {
 			json: program.json
 		});
 
-		if (circular.length && !program.allowFailures) {
+		if (!program.allowFailures && circular.length) {
 			exitCode = 1;
 		}
 
